@@ -1,6 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 // import {render} from '@testing-library/react';
+import {Typography} from '@material-ui/core';
 
 import App from './App';
 
@@ -9,6 +10,7 @@ beforeAll(() => {wrapper = mount(<App/>)});
 
 describe('App Test Suite', () => {
     it('renders react app', () => {
-        expect(wrapper.contains(<h1>React App Template</h1>)).toEqual(true);
+        const typoComp = <Typography variant="h4">Material React App Template</Typography>;
+        expect(wrapper.contains(typoComp)).toEqual(true);
     });
 });
